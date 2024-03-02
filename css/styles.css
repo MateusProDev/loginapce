@@ -10,7 +10,8 @@ body {
 }
 
 #app {
-  width: 512px;
+  width: 100%;
+  height: auto;
   margin: auto;
   box-shadow: 4px 4px 20px #888;
   padding: 20px;
