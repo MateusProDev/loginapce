@@ -1,70 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APCE</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="shortcut icon" href="img/logoapce.jpeg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APCE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="app">
-    <!--Logotipo do TodoList-->
-    <div class="center">
-      <img src="img/logoapce.jpeg">
-    </div>
-
-    <!--Conteúdo destinado para usuários não autenticados-->
-    <div id="auth" class="center">
-      <!--Formulário de autenticação-->
-      <form id="authForm">
-        <h1>APCE</h1>
-        <h3 id="authFormTitle">Acesse a sua conta para continuar</h3>
-
-        <label for="email">E-mail: </label>
-        <input type="email" placeholder="E-mail" id="email" autocomplete="current-password">
-
-        <label for="password">Senha: </label>
-        <input type="password" placeholder="Senha" id="password" autocomplete="current-password">
-
-         <!-- feedback de carregamento -->
-        <div id="loading">
-          <img src="img/loading.gif" alt="animação de carregamento">
-        </div>
-
-        <button type="submit" id="submitAuthForm">Acessar</button>
-      </form>
-
-      <!--Alternar o fomulário de autenticação para o cadastro de novas contas-->
-      <p id="register">
-        Não possui uma conta?
-        <button onclick="toggleToRegister()" class="alternative">Cadastrar uma nova conta</button>
-      </p>
-
-      <!--Alternar o fomulário de autenticação para o cadastro de novas contas-->
-      <p id="access" class="startHidden">
-        Já possui uma conta?
-        <button onclick="toggleToAccess()" class="alternative">Acesse a sua conta</button>
-      </p>
-    </div>
-
-    <!-- Conteudo destinado para usuarios nao autenticados -->
-    <div id="userContent" class="startHidden">
-      <hr>
-      <div id="userInfo" class="center">
-        <p>Usuario logado:</p>
-        <p id="userEmail"></p>
-        <button class="alternative" onclick="signOut()">Sair</button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Recurso do firebase -->
-  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
-
-  <script src="js/firebase.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/auth.js"></script>
+    <main>
+        <div id="particles-js"></div>
+        <section class="home">
+            <div class="boxHome">
+                <h1>Associação de programadores do ceará</h1>
+                <p>Somos uma comunidade que busca criar conecções</p>
+                <a href="index.html"><button class="myButton">Login</button></a>
+            </div>
+        </section>
+    </main>
+    <!-- stats - count particles --> 
+    <div class="count-particles"> <span class="js-count-particles"></span></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/17/Stats.min.js"></script>
+    <script src="js/particle.js"></script>
 </body>
 </html>
