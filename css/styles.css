@@ -71,6 +71,12 @@ p {
   background-color: rgb(196, 139, 5);
 }
 
+#loading{
+  position: relative;
+}
+#loading img {
+  width: 50px;
+}
 #userEmail{
   margin:  20px 0;
 }
