@@ -1,0 +1,107 @@
+*{
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/homeBackgroud.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home{
+    display: flex;
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+}
+.boxHome{
+    width: 100%;
+    margin: auto;
+}
+.boxHome h1{
+    font-size: 80px;
+    font-family: "Coda", system-ui;
+    font-weight: 900;
+    font-style: normal;
+    color: #fb9e25;
+    text-shadow: 2px 2px 2px #33333333;
+}
+.boxHome p{
+    font-size: 28px;
+    margin: 20px 0;
+    font-family: "Coda", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #555;
+}
+
+.myButton {
+	box-shadow:inset 0px 0px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:14px;
+	border:2px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:9px 24px;
+	text-decoration:none;
+	text-shadow:0px 2px 0px #cc9f52;
+    box-shadow: 4px 4px 4px #33333333;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	background-color:#fb9e25;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Estilos padrão para telas grandes */
+body {
+    font-size: 16px;
+  }
+  
+  /* Estilos para telas médias */
+  @media only screen and (max-width: 992px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilos para telas pequenas */
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 12px;
+    }
+  }
+  
+  /* Estilos para telas extra pequenas (dispositivos móveis) */
+  @media only screen and (max-width: 576px) {
+    .boxHome h1{
+        font-size: 40px;
+        font-family: "Coda", system-ui;
+        font-weight: 900;
+        font-style: normal;
+        color: #fb9e25;
+        text-shadow: 2px 2px 2px #33333333;
+    }
+    .boxHome p{
+        font-size: 22px;
+        margin: 20px;
+        font-family: "Coda", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: #555;
+    }
+  }
+  

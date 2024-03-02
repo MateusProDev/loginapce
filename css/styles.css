@@ -25,7 +25,6 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 15px;
 }
 
 .startHidden {
@@ -39,20 +38,19 @@ h3 {
 
 input {
   width: 80%;
-  margin: 4px;
-  padding: 4px;
-  font-size: 15px;
+  margin: 10px 4px;
+  padding: 10px;
+  font-size: 18px;
   border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
 }
-
-button {
+#submitAuthForm {
   background-color: #4c4;
-  font-size: 15px;
+  font-size: 22px;
   color: white;
-  padding: 4px 8px;
-  margin: 4px;
+  padding: 4px 12px;
+  margin: 4px 0 20px 0;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -62,7 +60,13 @@ button:hover {
   opacity: 0.75;
   cursor: pointer;
 }
-
+.alternative{
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #fff;
+}
 p {
   margin: 0;
 }
