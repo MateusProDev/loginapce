@@ -3,11 +3,15 @@ body {
   font-family: Tahoma;
   display: flex;
   height: 96vh;
-  background-color: #888;
+  background-image: url('/img/backgroud.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #app {
   width: 512px;
+  height: 400px;
   margin: auto;
   box-shadow: 4px 4px 20px #888;
   padding: 20px;
