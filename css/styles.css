@@ -3,6 +3,10 @@ body {
   font-family: Tahoma;
   display: flex;
   height: 96vh;
+  background-image: url('/img/backgroud.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #app {
@@ -11,10 +15,17 @@ body {
   box-shadow: 4px 4px 20px #888;
   padding: 20px;
   border-radius: 20px;
+  background-color: #ffffffa9;
 }
 
 .center {
   text-align: center;
+}
+.center img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
 .startHidden {
@@ -40,7 +51,7 @@ button {
   background-color: #4c4;
   font-size: 15px;
   color: white;
-  padding: 4px;
+  padding: 4px 8px;
   margin: 4px;
   border-radius: 8px;
   border: none;
@@ -57,7 +68,7 @@ p {
 }
 
 .alternative {
-  background-color: #44c;
+  background-color: rgb(196, 139, 5);
 }
 
 #loading{
@@ -65,4 +76,7 @@ p {
   top: calc(50% - 100px);
   left: calc(50% - 100px);
   z-index: 1;
+}
+#userEmail{
+  margin:  20px 0;
 }
