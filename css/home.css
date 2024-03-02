@@ -2,15 +2,15 @@
     margin: 0;   
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none;
 }
 main{
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url('/img/homeBackgroud.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .home{
     display: flex;
@@ -22,6 +22,7 @@ main{
 .boxHome{
     width: 100%;
     margin: auto;
+    z-index: 999;
 }
 .boxHome h1{
     font-size: 80px;
@@ -65,25 +66,6 @@ main{
 	position:relative;
 	top:1px;
 }
-
-/* Estilos padrão para telas grandes */
-body {
-    font-size: 16px;
-  }
-  
-  /* Estilos para telas médias */
-  @media only screen and (max-width: 992px) {
-    body {
-      font-size: 14px;
-    }
-  }
-  
-  /* Estilos para telas pequenas */
-  @media only screen and (max-width: 768px) {
-    body {
-      font-size: 12px;
-    }
-  }
   
   /* Estilos para telas extra pequenas (dispositivos móveis) */
   @media only screen and (max-width: 576px) {
@@ -104,4 +86,52 @@ body {
         color: #555;
     }
   }
-  
+  /* ---- particles.js container ---- */ 
+#particles-js{ 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background-color: transparent; 
+    background-position: 50% 50%;
+    background-image: url('/img/homeBackgroud.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+/* ---- stats.js ---- */ 
+.count-particles{ 
+    background: transparent; 
+    position: absolute; 
+    top: 48px; 
+    left: 0; 
+    width: 80px; 
+    color: #13E8E9; 
+    font-size: 
+    .8em; 
+    text-align: left; 
+    text-indent: 4px; 
+    line-height: 14px; 
+    padding-bottom: 2px; 
+    font-family: Helvetica, Arial, sans-serif; 
+    font-weight: bold;
+} 
+.js-count-particles{ 
+    font-size: 1.1em; 
+} 
+#stats, 
+.count-particles{ 
+    -webkit-user-select: none; 
+    margin-top: 5px; 
+    margin-left: 5px; 
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none;
+} 
+#stats{ 
+    border-radius: 3px 3px 0 0; 
+    overflow: hidden; 
+} 
+.count-particles{ 
+    border-radius: 0 0 3px 3px; 
+} 
