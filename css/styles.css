@@ -1,0 +1,68 @@
+body {
+  color: #444;
+  font-family: Tahoma;
+  display: flex;
+  height: 96vh;
+}
+
+#app {
+  width: 512px;
+  margin: auto;
+  box-shadow: 4px 4px 20px #888;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.startHidden {
+  display: none;
+}
+
+h3 {
+  margin: 4px;
+  font-weight: normal;
+}
+
+input {
+  width: 80%;
+  margin: 4px;
+  padding: 4px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+button {
+  background-color: #4c4;
+  font-size: 15px;
+  color: white;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.alternative {
+  background-color: #44c;
+}
+
+#loading{
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  z-index: 1;
+}

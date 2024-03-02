@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TodoList</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="img/todoListFavicon.png" type="image/x-icon">
+</head>
+<body>
+  <div id="app">
+    <!--Logotipo do TodoList-->
+    <div class="center">
+      <img src="img/todoList.png">
+    </div>
+
+    <!-- feedback de carregamento -->
+    <div id="loading">
+      <img src="img/loading.gif" alt="animação de carregamento">
+    </div>
+
+    <!--Conteúdo destinado para usuários não autenticados-->
+    <div id="auth" class="center">
+      <!--Formulário de autenticação-->
+      <form id="authForm">
+        <h3 id="authFormTitle">Acesse a sua conta para continuar</h3>
+
+        <label for="email">E-mail: </label>
+        <input type="email" placeholder="E-mail" id="email" autocomplete="current-password">
+
+        <label for="password">Senha: </label>
+        <input type="password" placeholder="Senha" id="password" autocomplete="current-password">
+
+        <button type="submit" id="submitAuthForm">Acessar</button>
+      </form>
+
+      <!--Alternar o fomulário de autenticação para o cadastro de novas contas-->
+      <p id="register">
+        Não possui uma conta?
+        <button onclick="toggleToRegister()" class="alternative">Cadastrar uma nova conta</button>
+      </p>
+
+      <!--Alternar o fomulário de autenticação para o cadastro de novas contas-->
+      <p id="access" class="startHidden">
+        Já possui uma conta?
+        <button onclick="toggleToAccess()" class="alternative">Acesse a sua conta</button>
+      </p>
+    </div>
+
+    <!-- Conteudo destinado para usuarios nao autenticados -->
+    <div id="userContent" class="startHidden">
+      <hr>
+      <div id="userInfo" class="center">
+        <p>Usuario:</p>
+        <p id="userEmail"></p>
+        <button class="alternative" onclick="signOut()">Sair</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Recurso do firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
