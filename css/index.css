@@ -91,7 +91,7 @@ main{
 #particles-js{ 
     position: absolute; 
     width: 100%; 
-    height: 100%; 
+    height: 100vh; 
     background-color: transparent; 
     background-position: 50% 50%;
     background-image: url('/img/homeBackgroud.jpg');
