@@ -16,7 +16,7 @@ main{
 .home{
     display: flex;
     width: 90%;
-    height: 400px;
+    height: 100vh;
     margin: auto;
     text-align: center;
     
