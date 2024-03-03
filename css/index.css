@@ -11,6 +11,7 @@ main{
     display: flex;
     width: 100%;
     height: 100vh;
+    
 }
 .home{
     display: flex;
@@ -18,6 +19,7 @@ main{
     height: 400px;
     margin: auto;
     text-align: center;
+    
 }
 .boxHome{
     width: 100%;
@@ -30,7 +32,6 @@ main{
     font-weight: 900;
     font-style: normal;
     color: #fb9e25;
-    text-shadow: 2px 2px 2px #33333333;
 }
 .boxHome p{
     font-size: 28px;
@@ -97,6 +98,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: inset 100% 0px 0px #33333333;
 } 
 /* ---- stats.js ---- */ 
 .count-particles{ 
