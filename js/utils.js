@@ -52,7 +52,7 @@ function hideItem(element) {
 function showUserContent(user) {
   console.log(user)
   if (user.providerData[0].providerId != 'password') {
-    emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
+    emailVerified.innerHTML = 'Seja Bem-Vindo!'
     hideItem(sendEmailVerificationDiv)
   } else {
     if (user.emailVerified) {
