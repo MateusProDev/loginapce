@@ -39,7 +39,7 @@
         Esqueceu a senha?
         <button class="alternative" onclick="sendPasswordResetEmail()">Redefinir minha senha</button>
       </p>
-      
+
       <!--Alternar o fomulário de autenticação para o cadastro de novas contas-->
       <p id="register">
         Não possui uma conta?
@@ -53,6 +53,14 @@
       </p>
     </div>
 
+     <!--Outros provedores de autenticação-->
+     <p>
+      Ou acesse usando:<br>
+      <img src="img/google.png" alt="Autenticação pelo Google" onclick="signInWithGoogle()">
+      <img src="img/github.png" alt="Autenticação pelo GitHub" onclick="signInWithGitHub()">
+      <img src="img/facebook.png" alt="Autenticação pelo Facebook" onclick="signInWithFacebook()">
+    </p>
+    
     <!--Conteúdo destinado para usuários autenticados-->
     <div id="userContent" class="startHidden">
       <hr>

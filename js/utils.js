@@ -16,6 +16,9 @@ var emailVerified = document.getElementById('emailVerified')
 
 var passwordReset = document.getElementById('passwordReset')
 
+var userName = document.getElementById('userName')
+var userImg = document.getElementById('userImg')
+
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister() {
@@ -48,13 +51,21 @@ function hideItem(element) {
 // Mostrar conteúdo para usuários autenticados
 function showUserContent(user) {
   console.log(user)
-  if (user.emailVerified) {
-    emailVerified.innerHTML = 'E-mail verificado'
+  if (user.providerData[0].providerId != 'password') {
+    emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
     hideItem(sendEmailVerificationDiv)
   } else {
-    emailVerified.innerHTML = 'E-mail não verificado'
-    showItem(sendEmailVerificationDiv)
+    if (user.emailVerified) {
+      emailVerified.innerHTML = 'E-mail verificado'
+      hideItem(sendEmailVerificationDiv)
+    } else {
+      emailVerified.innerHTML = 'E-mail não verificado'
+      showItem(sendEmailVerificationDiv)
+    }
   }
+  
+  userImg.src = user.photoURL ? user.photoURL : 'img/unknownUser.png'
+  userName.innerHTML = user.displayName
   userEmail.innerHTML = user.email
   hideItem(auth)
   showItem(userContent)
@@ -70,5 +81,5 @@ function showAuth() {
 
 // Atributos extras de configuração de e-mail
 var actionCodeSettings = {
-  url: 'https://apce.vercel.app/login.html'
+  url: 'http://apce.vercel.app/'
 }

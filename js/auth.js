@@ -70,3 +70,35 @@ function sendPasswordResetEmail() {
     alert('É preciso preencher o campo de e-mail para redefinir a senha!')
   }
 }
+
+// Função que permite a autenticação pelo Google
+function signInWithGoogle() {
+  showItem(loading)
+  firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch(function (error) {
+    alert('Houve um erro ao autenticar usando o Google')
+    console.log(error)
+    hideItem(loading)
+  })
+}
+
+// Função que permite a autenticação pelo GitHub
+function signInWithGitHub() {
+  showItem(loading)
+  firebase.auth().signInWithPopup(new firebase.auth.GithubAuthProvider()).catch(function (error) {
+    alert('Houve um erro ao autenticar usando o GitHub')
+    console.log(error)
+    hideItem(loading)
+  })
+}
+
+// Função que permite a autenticação pelo Facebook
+function signInWithFacebook() {
+  showItem(loading)
+  firebase.auth().signInWithPopup(new firebase.auth.FacebookAuthProvider()).catch(function (error) {
+    alert('Houve um erro ao autenticar usando o Facebook')
+    console.log(error)
+    hideItem(loading)
+  })
+}
+
+
