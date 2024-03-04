@@ -137,3 +137,17 @@ main{
 .count-particles{ 
     border-radius: 0 0 3px 3px; 
 } 
+
+#auth img {
+  cursor: pointer;
+  margin: 4px;
+}
+
+#auth img:hover {
+  opacity: 0.75;
+}
+
+#userImg {
+  height: 40px;
+  border-radius: 100%;
+}

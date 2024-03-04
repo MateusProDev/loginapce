@@ -84,3 +84,23 @@ p {
 #userEmail{
   margin:  20px 0;
 }
+#networks{
+  margin: 15px 0 0 0;
+}
+#auth img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 8px 2px;
+}
+
+#auth img:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+#userImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
