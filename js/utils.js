@@ -64,7 +64,7 @@ function showUserContent(user) {
     }
   }
   
-  userImg.src = user.photoURL ? user.photoURL : 'img/logoapce.jpeg'
+  userImg.src = user.photoURL ? user.photoURL : ''
   userName.innerHTML = user.displayName
   userEmail.innerHTML = user.email
   hideItem(auth)
