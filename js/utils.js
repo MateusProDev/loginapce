@@ -84,5 +84,5 @@ function showAuth() {
 
 // Atributos extras de configuração de e-mail
 var actionCodeSettings = {
-  url: 'http://apce.vercel.app/'
+  url: 'https://apce.vercel.app/'
 }
