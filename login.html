@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APCE</title>
   <link rel="stylesheet" href="css/styles.css">
+  <title>APCE</title>
 </head>
 <body>
   <div id="app">
-    <!--Logotipo do TodoList-->
+    <!--Logotipo-->
     <div class="center">
       <img src="img/logoapce.jpeg">
     </div>
@@ -47,12 +47,15 @@
       </p>
     </div>
 
-    <!-- Conteudo destinado para usuarios nao autenticados -->
+    <!--Conteúdo destinado para usuários autenticados-->
     <div id="userContent" class="startHidden">
       <hr>
       <div id="userInfo" class="center">
-        <p>Usuario logado:</p>
         <p id="userEmail"></p>
+        <p id="emailVerified"></p>
+        <div id="sendEmailVerificationDiv">
+          <button class="alternative" onclick="sendEmailVerification()">Verificar e-mail</button>
+        </div>
         <button class="alternative" onclick="signOut()">Sair</button>
       </div>
     </div>

@@ -3,10 +3,16 @@ var authForm = document.getElementById('authForm')
 var authFormTitle = document.getElementById('authFormTitle')
 var register = document.getElementById('register')
 var access = document.getElementById('access')
+
 var loading = document.getElementById('loading')
+
 var auth = document.getElementById('auth')
 var userContent = document.getElementById('userContent')
+
 var userEmail = document.getElementById('userEmail')
+
+var sendEmailVerificationDiv = document.getElementById('sendEmailVerificationDiv')
+var emailVerified = document.getElementById('emailVerified')
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister() {
@@ -24,24 +30,40 @@ function toggleToAccess() {
   showItem(register)
 }
 
-// Simpplifica a exibição de elementos da página
+// Simplifica a exibição de elementos da página
 function showItem(element) {
   element.style.display = 'block'
 }
 
-// Simpplifica a remoção de elementos da página
+// Simplifica a remoção de elementos da página
 function hideItem(element) {
   element.style.display = 'none'
 }
-// Mostrat conteudo para usuario não autenticados
-function showUserContent(user){
+
+// Mostrar conteúdo para usuários autenticados
+function showUserContent(user) {
+  console.log(user) 
+  if (user.emailVerified) {
+    emailVerified.innerHTML = 'E-mail verificado'
+    hideItem(sendEmailVerificationDiv)
+  } else {
+    emailVerified.innerHTML = 'E-mail não verificado'
+    showItem(sendEmailVerificationDiv)
+  }
   userEmail.innerHTML = user.email
   hideItem(auth)
   showItem(userContent)
 }
-function showAuth(){
+
+// Mostrar conteúdo para usuários não autenticados
+function showAuth() {
   authForm.email.value = ''
   authForm.password.value = ''
   hideItem(userContent)
   showItem(auth)
+}
+
+// Atributos extras de configuração de e-mail
+var actionCodeSettings = {
+  url: 'http://127.0.0.1:5500/'
 }
