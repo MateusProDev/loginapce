@@ -70,6 +70,9 @@ function showUserContent(user) {
   hideItem(auth)
   showItem(userContent)
 }
+// Ocultar a logo
+var logo = document.querySelector('.center img');
+hideItem(logo);
 
 // Mostrar conteúdo para usuários não autenticados
 function showAuth() {
