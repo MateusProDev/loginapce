@@ -110,7 +110,7 @@ function showError(prefix, error) {
 
 // Atributos extras de configuração de e-mail
 var actionCodeSettings = {
-  url: 'http://apce.vercel.app/'
+  url: 'https://apce-7d088.firebaseapp.com'
 }
 
 var database = firebase.database()
