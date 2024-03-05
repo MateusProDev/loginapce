@@ -1,4 +1,3 @@
-
 // Traduz para português brasileiro a autenticação do Firebase
 firebase.auth().languageCode = 'pt-BR'
 

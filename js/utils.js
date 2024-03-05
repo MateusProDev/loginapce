@@ -3,23 +3,19 @@ var authForm = document.getElementById('authForm')
 var authFormTitle = document.getElementById('authFormTitle')
 var register = document.getElementById('register')
 var access = document.getElementById('access')
-
 var loading = document.getElementById('loading')
-
 var auth = document.getElementById('auth')
 var userContent = document.getElementById('userContent')
-
 var userEmail = document.getElementById('userEmail')
-
 var sendEmailVerificationDiv = document.getElementById('sendEmailVerificationDiv')
 var emailVerified = document.getElementById('emailVerified')
-
 var passwordReset = document.getElementById('passwordReset')
-
 var userName = document.getElementById('userName')
 var userImg = document.getElementById('userImg')
 var postUser = document.getElementById('postUser')
-
+var todoForm = document.getElementById('todoForm')
+var todoCount = document.getElementById('todoCount')
+var ulTodoList = document.getElementById('ulTodoList')
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister() {
@@ -75,6 +71,12 @@ function showUserContent(user) {
   userEmail.innerHTML = user.email
   hideItem(auth)
   showItem(userContent)
+
+  dbRefUsers.child(firebase.auth().currentUser.uid).on('value', function (dataSnapshot) {
+    fillTodoList(dataSnapshot)
+  })
+
+  showItem(userContent)
 }
 
 // Mostrar conteúdo para usuários não autenticados
@@ -110,3 +112,6 @@ function showError(prefix, error) {
 var actionCodeSettings = {
   url: 'http://apce.vercel.app/'
 }
+
+var database = firebase.database()
+var dbRefUsers = database.ref('users')
