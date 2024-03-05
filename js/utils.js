@@ -28,6 +28,7 @@ function toggleToRegister() {
   hideItem(register) // Esconder atalho para cadastrar conta
   hideItem(passwordReset) // Esconder a opção de redefinição de senha
   showItem(access) // Mostrar atalho para acessar conta
+  showItem(logoUser)
 }
 
 // Alterar o formulário de autenticação para o acesso de contas já existentes
@@ -61,6 +62,7 @@ function showUserContent(user) {
       emailVerified.innerHTML = 'E-mail verificado'
       hideItem(sendEmailVerificationDiv)
       showItem(postUser)
+      hideItem(logoUser)
     } else {
       emailVerified.innerHTML = 'E-mail não verificado'
       showItem(sendEmailVerificationDiv)
