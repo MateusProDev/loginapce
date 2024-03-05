@@ -54,6 +54,7 @@ function showUserContent(user) {
   if (user.providerData[0].providerId != 'password') {
     emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
     hideItem(sendEmailVerificationDiv)
+    showItem(postUser)
   } else {
     if (user.emailVerified) {
       emailVerified.innerHTML = 'E-mail verificado'
@@ -76,6 +77,7 @@ function showAuth() {
   authForm.email.value = ''
   authForm.password.value = ''
   hideItem(userContent)
+  hideItem(postUser)
   showItem(auth)
 }
 
