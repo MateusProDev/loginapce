@@ -71,12 +71,6 @@ function showUserContent(user) {
   userEmail.innerHTML = user.email
   hideItem(auth)
   showItem(userContent)
-
-  dbRefUsers.child(firebase.auth().currentUser.uid).on('value', function (dataSnapshot) {
-    fillTodoList(dataSnapshot)
-  })
-
-  showItem(userContent)
 }
 
 // Mostrar conteúdo para usuários não autenticados
@@ -112,6 +106,3 @@ function showError(prefix, error) {
 var actionCodeSettings = {
   url: 'https://apce.vercel.app/'
 }
-
-var database = firebase.database()
-var dbRefUsers = database.ref('users')
