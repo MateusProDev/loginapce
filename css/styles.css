@@ -70,6 +70,9 @@ button:hover {
   border: none;
   outline: none;
 }
+.center a{
+  text-decoration: none;
+}
 #postUser{
   background-color: #4c4;
   font-size: 18px;
@@ -78,7 +81,7 @@ button:hover {
   margin: 20px auto 20px auto;
   border-radius: 8px;
   border: none;
-  outline: none;
+  outline: none;  
 }
 
 .alternative{
