@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog da Associação</title>
+    <title>Postar</title>
     <link rel="stylesheet" href="css/posts.css">
 </head>
 <body>
     <header>
         <img id="logo" src="img/logoapce.jpeg" alt="logo">
-        <h1>Blog da Associação</h1>
+        <h1>Postagens</h1>
         <p>Crie uma postagem para contribuir com o desenvolvimentos da Associação</p>
     </header>
 
-    <div id="posts-container">
-        <!-- Aqui serão exibidos os posts -->
-    </div>
-
-    <form id="add-post-form">
-        <input type="text" id="post-title" placeholder="Título">
-        <input type="text" id="post-image-url" placeholder="URL da imagem">
-        <textarea id="post-content" placeholder="Conteúdo"></textarea>
-        <button type="submit">Publicar</button>
-    </form>
+    <div class="center">
+        <!--Formulário de tarefas-->
+        <form id="todoForm">
+          <h3 id="todoFormTitle">Adicionar Postagens no feed:</h3>
+          <label for="name">Tarefa: </label>
+          <input type="text" id="name" placeholder="Tarefa">
+          <button type="submit" id="submitTodoForm">Adicionar tarefa</button>
+        </form>
+      </div>
     <div id="voltarBtn">
         <a href="/postagens.html"><button>Voltar</button></a>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js"></script>
-    <script src="app.js"></script>
+    <!--Recursos do Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+  
+  <!--Nossa programação em JavaScript-->
+  <script src="js/firebase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/todo.js"></script>
 </body>
 </html>

@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog da Associação</title>
+    <title>Feed APCE</title>
     <link rel="stylesheet" href="css/postShow.css">
 </head>
 <body>
     <header>
-        <h1>Blog da Associação</h1>
+        <h1>Feed APCE</h1>
     </header>
     <div class="homePost">
-        <a href="posts.html"><button>Criar Postagem</button></a>
-    </div>
-    <div id="posts-container">
-        <!-- Aqui serão exibidos os posts -->
+        <P>Crie conteudo e compartilhe com a APCE</P>
+        <a href="posts.html"><button>+</button></a>
+        <a href="login.html"><button>Perfil</button></a>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js"></script>
-    <script src="app.js"></script>
+      <!--Lista de tarefas do usuário-->
+      <div id="todoList">
+        <h3 id="todoCount"></h3>
+        <ul id="ulTodoList"></ul>
+      </div>
+
+    <!--Recursos do Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+  
+  <!--Nossa programação em JavaScript-->
+  <script src="js/firebase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/todo.js"></script>
 </body>
 </html>

@@ -81,7 +81,9 @@ p {
 }
 
 #add-post-form button {
+    display: flex;
     padding: 10px 20px;
+    text-align: center;
     background-color: #333;
     color: white;
     border: none;
