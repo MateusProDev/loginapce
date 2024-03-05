@@ -18,6 +18,7 @@ var passwordReset = document.getElementById('passwordReset')
 
 var userName = document.getElementById('userName')
 var userImg = document.getElementById('userImg')
+var postUser = document.getElementById('postUser')
 
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
@@ -59,9 +60,11 @@ function showUserContent(user) {
     if (user.emailVerified) {
       emailVerified.innerHTML = 'E-mail verificado'
       hideItem(sendEmailVerificationDiv)
+      showItem(postUser)
     } else {
       emailVerified.innerHTML = 'E-mail não verificado'
       showItem(sendEmailVerificationDiv)
+      hideItem(postUser)
     }
   }
   
@@ -77,7 +80,6 @@ function showAuth() {
   authForm.email.value = ''
   authForm.password.value = ''
   hideItem(userContent)
-  hideItem(postUser)
   showItem(auth)
 }
 
