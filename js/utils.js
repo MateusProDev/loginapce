@@ -1,21 +1,25 @@
-// Definindo referências para elementos da página
+// Defindo referências para elementos da página
 var authForm = document.getElementById('authForm')
 var authFormTitle = document.getElementById('authFormTitle')
 var register = document.getElementById('register')
 var access = document.getElementById('access')
+
 var loading = document.getElementById('loading')
+
 var auth = document.getElementById('auth')
 var userContent = document.getElementById('userContent')
+
 var userEmail = document.getElementById('userEmail')
+
 var sendEmailVerificationDiv = document.getElementById('sendEmailVerificationDiv')
 var emailVerified = document.getElementById('emailVerified')
+
 var passwordReset = document.getElementById('passwordReset')
+
 var userName = document.getElementById('userName')
 var userImg = document.getElementById('userImg')
+var postUser = document.getElementById('postUser')
 
-var todoForm = document.getElementById('todoForm')
-var todoCount = document.getElementById('todoCount')
-var ulTodoList = document.getElementById('ulTodoList')
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister() {
@@ -24,6 +28,7 @@ function toggleToRegister() {
   hideItem(register) // Esconder atalho para cadastrar conta
   hideItem(passwordReset) // Esconder a opção de redefinição de senha
   showItem(access) // Mostrar atalho para acessar conta
+  showItem(logoUser)
 }
 
 // Alterar o formulário de autenticação para o acesso de contas já existentes
@@ -51,25 +56,24 @@ function showUserContent(user) {
   if (user.providerData[0].providerId != 'password') {
     emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
     hideItem(sendEmailVerificationDiv)
+    showItem(postUser)
   } else {
     if (user.emailVerified) {
       emailVerified.innerHTML = 'E-mail verificado'
       hideItem(sendEmailVerificationDiv)
+      showItem(postUser)
+      hideItem(logoUser)
     } else {
       emailVerified.innerHTML = 'E-mail não verificado'
       showItem(sendEmailVerificationDiv)
+      hideItem(postUser)
     }
   }
   
-  userImg.src = user.photoURL ? user.photoURL : 'img/unknownUser.png'
+  userImg.src = user.photoURL ? user.photoURL : 'img/placeholder.png'
   userName.innerHTML = user.displayName
   userEmail.innerHTML = user.email
   hideItem(auth)
-
-  dbRefUsers.child(firebase.auth().currentUser.uid).on('value', function (dataSnapshot) {
-    fillTodoList(dataSnapshot)
-  })
-
   showItem(userContent)
 }
 
@@ -104,8 +108,5 @@ function showError(prefix, error) {
 
 // Atributos extras de configuração de e-mail
 var actionCodeSettings = {
-  url: 'https://apce.vercel.app'
+  url: 'http://apce.vercel.app/'
 }
-
-var database = firebase.database()
-var dbRefUsers = database.ref('users')

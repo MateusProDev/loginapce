@@ -80,13 +80,6 @@ function signInWithGitHub() {
   })
 }
 
-// Função que permite a autenticação pelo Facebook
-function signInWithFacebook() {
-  showItem(loading)
-  firebase.auth().signInWithPopup(new firebase.auth.FacebookAuthProvider()).catch(function (error) {
-    showError('Falha ao autenticar com o Facebook: ', error)
-  })
-}
 
 // Função que permite atualizar nomes de usuários
 function updateUserName() {
@@ -105,7 +98,6 @@ function updateUserName() {
     alert('O nome de usuário não pode ser vazio')
   }
 }
-
 // Função que permite remover contas de usuário
 function deleteUserAccount() {
   var confirmation = confirm('Realmente deseja excluir a sua conta?')
