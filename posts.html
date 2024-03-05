@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog da Associação</title>
+    <link rel="stylesheet" href="css/posts.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logoapce.jpeg" alt="logo">
+        <h1>Blog da Associação</h1>
+        <p>Crie uma postagem para contribuir com o desenvolvimentos da Associação</p>
+        <h1>AINDA NÃO ESTAR FUNCIONANDO</h1>
+    </header>
+
+    <div id="posts-container">
+        <!-- Aqui serão exibidos os posts -->
+    </div>
+
+    <form id="add-post-form">
+        <input type="text" id="post-title" placeholder="Título">
+        <input type="text" id="post-image-url" placeholder="URL da imagem">
+        <textarea id="post-content" placeholder="Conteúdo"></textarea>
+        <button type="submit">Publicar</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

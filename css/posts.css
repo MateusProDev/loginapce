@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+#logo{
+    width: 80px;
+}
+#posts-container {
+    margin: 20px;
+}
+
+.post {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.post img {
+    max-width: 100%;
+}
+
+#add-post-form {
+    margin: 20px;
+}
+
+#add-post-form input[type="text"],
+#add-post-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#add-post-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
