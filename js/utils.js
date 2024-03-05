@@ -104,7 +104,7 @@ function showError(prefix, error) {
 
 // Atributos extras de configuração de e-mail
 var actionCodeSettings = {
-  url: 'https://todolist-84473.firebaseapp.com'
+  url: 'https://apce.vercel.app'
 }
 
 var database = firebase.database()
