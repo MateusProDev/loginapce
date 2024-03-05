@@ -1,21 +1,21 @@
-// Defindo referências para elementos da página
-var authForm = document.getElementById('authForm')
-var authFormTitle = document.getElementById('authFormTitle')
-var register = document.getElementById('register')
-var access = document.getElementById('access')
-var loading = document.getElementById('loading')
-var auth = document.getElementById('auth')
-var userContent = document.getElementById('userContent')
-var userEmail = document.getElementById('userEmail')
-var sendEmailVerificationDiv = document.getElementById('sendEmailVerificationDiv')
-var emailVerified = document.getElementById('emailVerified')
-var passwordReset = document.getElementById('passwordReset')
-var userName = document.getElementById('userName')
-var userImg = document.getElementById('userImg')
-var postUser = document.getElementById('postUser')
-var todoForm = document.getElementById('todoForm')
-var todoCount = document.getElementById('todoCount')
-var ulTodoList = document.getElementById('ulTodoList')
+// Definindo referências para elementos da página
+var authForm = document.getElementById('authForm');
+var authFormTitle = document.getElementById('authFormTitle');
+var register = document.getElementById('register');
+var access = document.getElementById('access');
+var loading = document.getElementById('loading');
+var auth = document.getElementById('auth');
+var userContent = document.getElementById('userContent');
+var userEmail = document.getElementById('userEmail');
+var sendEmailVerificationDiv = document.getElementById('sendEmailVerificationDiv');
+var emailVerified = document.getElementById('emailVerified');
+var passwordReset = document.getElementById('passwordReset');
+var userName = document.getElementById('userName');
+var userImg = document.getElementById('userImg');
+var postUser = document.getElementById('postUser');
+var todoForm = document.getElementById('todoForm');
+var todoCount = document.getElementById('todoCount');
+var ulTodoList = document.getElementById('ulTodoList');
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister() {
@@ -60,7 +60,7 @@ function showUserContent(user) {
       showItem(postUser)
       hideItem(logoUser)
     } else {
-      emailVerified.innerHTML = 'E-mail não verificado'
+      emailVerified.innerHTML = 'E-mail não verificado' + '<br>' + 'Para acessar as postagens, verificar seu e-mail'
       showItem(sendEmailVerificationDiv)
       hideItem(postUser)
     }
