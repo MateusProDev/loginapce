@@ -64,7 +64,7 @@ function showUserContent(user) {
     }
   }
   
-  userImg.src = user.photoURL ? user.photoURL : ''
+  userImg.src = user.photoURL ? user.photoURL : 'img/placeholder.png'
   userName.innerHTML = user.displayName
   userEmail.innerHTML = user.email
   hideItem(auth)
