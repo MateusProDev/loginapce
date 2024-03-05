@@ -52,7 +52,7 @@ function hideItem(element) {
 function showUserContent(user) {
   console.log(user)
   if (user.providerData[0].providerId != 'password') {
-    emailVerified.innerHTML = 'Seja Bem-Vindo!'
+    emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
     hideItem(sendEmailVerificationDiv)
   } else {
     if (user.emailVerified) {
@@ -70,9 +70,6 @@ function showUserContent(user) {
   hideItem(auth)
   showItem(userContent)
 }
-// Ocultar a logo
-var logo = document.querySelector('.center img');
-hideItem(logo);
 
 // Mostrar conteúdo para usuários não autenticados
 function showAuth() {
@@ -82,7 +79,28 @@ function showAuth() {
   showItem(auth)
 }
 
+// centralizar e traduzir erros
+function showError(prefix, error) {
+  console.log(error.code)
+  hideItem(loading)
+
+  switch (error.code) {
+    case 'auth/invalid-email': alert(prefix + ' ' + 'E-mail inválido!')
+    break;
+    case 'auth/wrong-password': alert(prefix + ' ' + 'Senha inválida!')
+    break;
+    case 'auth/weak-password': alert(prefix + ' ' + 'Senha deve ter ao menos 6 caracteres!')
+    break;
+    case 'auth/email-already-in-use': alert(prefix + ' ' + 'E-mail já está em uso por outra conta!')
+    break;
+    case 'auth/popup-closed-by-user': alert(prefix + ' ' + 'O popup de autenticação foi fechado antes da operação ser concluída!')
+    break;   
+  
+    default: alert(prefix + ' ' + error.message)
+  }
+}
+
 // Atributos extras de configuração de e-mail
 var actionCodeSettings = {
-  url: 'http://apce.vercel.app/'
+  url: 'http://127.0.0.1:5500/'
 }
