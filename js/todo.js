@@ -1,20 +1,22 @@
 // Trata a submissão do formulário de autenticação
 todoForm.onsubmit = function (event) {
-  event.preventDefault() // Evita o redirecionamento da página
-  if (todoForm.name.value != '') {
-    var data = {
-      name: todoForm.name.value
+    event.preventDefault(); // Evita o redirecionamento da página
+    var postName = document.getElementById('postName').value;
+    if (postName !== '') {
+      var data = {
+        name: postName
+      };
+  
+      dbRefUsers.child(firebase.auth().currentUser.uid).push(data).then(function () {
+        console.log('Post "' + data.name + '" adicionado com sucesso');
+      }).catch(function (error) {
+        showError('Falha ao adicionar post: ', error);
+      });
+    } else {
+      alert('O campo não pode ser em branco para criar post!');
     }
-
-    dbRefUsers.child(firebase.auth().currentUser.uid).push(data).then(function () {
-      console.log('Post "' + data.name + '" adicionado com sucesso')
-    }).catch(function (error) {
-      showError('Falha ao adicionar post: ', error)
-    })
-  } else {
-    alert('O campo não pode ser em branco para criar post!')
-  }
-}
+  };
+  
 
 // Exibe a lista de tarefas do usuário
 function fillTodoList(dataSnapshot) {
