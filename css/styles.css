@@ -92,7 +92,8 @@ p {
   width: 50px;
 }
 #userEmail{
-  margin:  20px 0;
+  font-size: 10px;
+  margin: 0 0 20px 0;
 }
 #networks{
   margin: 15px 0 0 0;
